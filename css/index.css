@@ -1,0 +1,150 @@
+@font-face{
+    font-family: 'LEIXO';
+    src: url('../assets/LEIXO.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'NanumSquareR';
+    src: url('../assets/NanumSquareR.ttf') format('truetype');
+}
+
+*{
+    font-family: 'NanumSquareR';
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 1em;
+
+    z-index: 1;
+}
+
+
+#layout{
+    height: auto;
+    overflow: hidden;
+
+    height: 4000px;
+}
+
+.IWOP{
+    font-family: 'LEIXO';
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: 160px;
+}
+.I,.W,.O,.P{
+    transition: 1s;
+    opacity: 1;
+}
+
+.I:hover,.W:hover,.O:hover,.P:hover{
+    opacity: 0.8;
+}
+
+@keyframes textWave {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px);; }
+    100%{ transform: translateY(0px); }
+}
+
+#iwop_main{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    overflow: visible;
+}
+
+.wave {
+    opacity: 1;
+    position: absolute;
+    background: linear-gradient(to right, #2EB6D4,#36AFFF);
+
+    top: -380vh;
+
+    width: 500vh;
+    height: 500vh;
+
+    margin: 0 auto;
+
+    transform-origin: 50% 48%;
+    border-radius: 46%;
+}
+
+.wave._1 {
+    opacity: 0.8;
+    animation: spin 30s infinite linear;
+}
+.wave._2 {
+    animation: spin 50s infinite linear;
+    opacity: .6;
+}
+.wave._3 {
+    opacity: .4;
+    animation: spin 70s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.iwop_text_center{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.iwop_spelling{
+    font-size: 1.5em;
+    color: white;
+
+}
+.iwop_webclub{
+    margin: 50px 0;
+
+    font-size: 2em;
+    color: white;
+
+}
+
+#iwop_history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+
+    margin: 0 auto;
+
+    margin-top: 200px;
+
+}
+.iwop_history_image{
+    height: 500px;
+
+    z-index: 0;
+
+}
+.iwop_history_content{
+    display: inline-block;
+    margin-left: 50px;
+    color: black;
+}
+.iwop_history_content h2{
+    color: #36afff;
+    font-size: 2.4em;
+}
+.iwop_history_content p{
+    font-size: 1.5em;
+}
